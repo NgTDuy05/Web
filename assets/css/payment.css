@@ -11,19 +11,23 @@ a {
 
 .wrap {
     width: 100%;
-    height: 724px;
     display: flex;
     flex: 1 0 auto;
     box-sizing: border-box;
-    font-size: 14px;
+    padding: 0 28px;
     margin: 0 auto;
 }
 
 .main {
+    padding: 28px 28px 0;
     width: 52%;
     display: flex;
-    flex: 1 0 auto;
+    flex: 2;
     flex-direction: column;
+}
+
+.sidebar {
+    flex: 1;
 }
 
 .main .logo {
@@ -40,13 +44,32 @@ a {
     flex-direction: column;
 }
 
+.row {
+    width: 100vw;
+}
+
 .col {
     flex: 0 0 100%;
-    max-width: 40%;
+    max-width: 30%;
+}
+
+.section {
+    margin-bottom: 50px;
 }
 
 .section-header {
     margin-bottom: 12px;
+}
+
+.section-content {
+    width: 100%;
+    border-color: #bee5eb;
+    background-color: #d1ecf1;
+    border-radius: 8px;
+}
+
+.section-content .alert {
+    padding: 14px;
 }
 
 .section-title, .modal-title, .sidebar-title{
@@ -57,6 +80,12 @@ a {
 .layout-flex {
     display: flex;
     align-items: baseline;
+    justify-content: space-between;
+}
+
+.radio-wrapper {
+    display: flex;
+    padding: 20px;
 }
 
 .layout-flex h2 {
@@ -79,4 +108,85 @@ a {
     height: 44px;
     background-color: #fff;
     color: #333;
+}
+
+.sidebar {
+    border-left: 1px solid #ccc;
+}
+
+.sidebar-header {
+    padding: 20px 0 20px 28px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sidebar-content {
+    padding: 20px 0 20px 28px;
+}
+
+.order-summary-section {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    justify-content: space-between;
+}
+
+.order-summary-section .product-description{
+    line-height: 60px;
+}
+
+span.product-description {
+    margin-left: -140px;
+}
+
+.order-summary-section:nth-child(2) {
+    padding: 16px 0;
+}
+
+.order-summary-section input {
+    width: 68%;
+    height: 32px;
+}
+
+.field-sub {
+    background-color: #2a9dcc;
+    border: 1px solid #ccc;
+    width: 32px;
+    height: 24px;
+}
+
+.order-summary-section:nth-child(3) {
+    display: block;
+}
+
+.total {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.total-line2,
+.total-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-line2 {
+    padding: 10px 0;
+    border: none;
+}
+
+.order-summary-nav {
+    display: flex;
+    justify-content: end;
+}
+.spiner {
+    color: #fff;
+    border: none;
+    width: 80px;
+    height: 30px;
+    background-color: #357ebd;
+
+}
+
+.nav-end {
+    border: none;
+    margin-top: 20px;
 }

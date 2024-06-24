@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 
-html {
-    width: 1263px;
-}
 
 * {
     padding: 0;
@@ -31,6 +28,7 @@ div {
 }
 
 body {
+    width: 100vw;
     font-size: 14px;
     font-family: sans-serif;
 }
@@ -46,10 +44,8 @@ header .topbar {
     line-height: 90px;
     height: 90px;
     width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    padding: 0 15px;
+    margin: 0 auto;
 }
 
 .row {
@@ -66,6 +62,11 @@ a {
     color: #231f20;
     text-decoration: none;
     background-color: transparent;
+}
+
+.tab .swiper-wrapper img {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 img {
@@ -243,21 +244,13 @@ form {
 }
 
 .swiper-container {
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    list-style: none;
     padding: 0;
-    z-index: 1;
 }
 
 .swiper-wrapper {
-    position: relative;
     width: 100%;
     height: 100%;
-    z-index: 1;
     display: flex;
-    transition-property: transform;
     box-sizing: content-box;
 }
 
@@ -265,38 +258,38 @@ form {
     flex-shrink: 0;
     width: 100%;
     height: 100%;
-    position: relative;
     transition-property: transform;
 }
 
 .section-service .image {
-    margin-top: -24px;
-    margin-bottom: 12px;
-    height: 46px;
+    margin-top: -30px;
     display: block;
 }
 
 .section-service h3 {
     font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 700;
+   
+   
     font-size: 14px;
     line-height: 12px;
     color: #fff;
     text-transform: uppercase;
-    margin: 0;
+ 
     padding-bottom: 5px;
 }
 
 .section-service p {
     font-family: monospace;
-    font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 166.9%;
     color: #fff;
-    margin: 0;
 }
+
+.product {
+    width: 1110px;
+}
+
 .section-product-goodprice,
 .section-product-new {
     height: 795px;
@@ -310,7 +303,6 @@ form {
 
 .block-title {
     padding-bottom: 35px;
-    position: relative;
     padding-top: 20px;
     text-transform: uppercase;
     flex: 0 0 41.666667%;
@@ -320,7 +312,6 @@ form {
 .block-title h2 {
     font-weight: 700;
     letter-spacing: 0;
-    position: relative;
     display: inline-block;
     margin: 0;
     font-size: 40px;
@@ -352,7 +343,6 @@ form {
 
 .module-product .tab-big .tab-ul {
     padding: 0px 20px;
-    position: relative;
 }
 
 .module-product .tab-big .tab-ul ul {
@@ -406,7 +396,6 @@ form {
 .module-product .tab {
     flex: 0 0 58.333333%;
     max-width: 58.333333%;
-    position: relative;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
@@ -439,30 +428,16 @@ form {
     padding-bottom: 100%;
     display: block;
     height: 0;
-    position: relative;
 }
 
-.product-action .product-thumbnail .image-thumb::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: #fdfdfd;
-    opacity: 0;
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-}
+
 
 .product-action .product-thumbnail .action {
     justify-content: center;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
+    margin-left: 99px;
     width: 100%;
     transform: translate(-50%, 0%);
-    z-index: 10;
-    display: block;
+
     
 }
 
@@ -528,7 +503,6 @@ form {
 
 .section-product-sale {
     height: 990px;
-    width: 1263px;
     background-color: #1c5b41;
     padding: 50px 0;
 }
@@ -550,7 +524,6 @@ form {
 .section-product-sale .view-more {
     text-align: center;
     display: block;
-    margin-top: 15px;
 }
 
 .section-product-sale .view-more a {
@@ -579,7 +552,6 @@ form {
 }
 
 .section-blog {
-    width: 1264px;
     height: 565px;
     padding-bottom: 50px;
     background-color: #FFFAF0;
@@ -773,7 +745,6 @@ form {
 }
 
 .footer {
-    width: 1264px;
     height: 448px;
     background-color: #000;
 }
@@ -838,3 +809,108 @@ form {
     color: #fe9614;
 }
 
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open{
+    display: flex;
+}
+
+.modal-container {
+    background-color: #fff;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+    animation: modalFaceIn ease 0.4s;
+}
+
+.modal-header {
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.modal-header {
+    letter-spacing: 5px;
+}
+
+.modal-header>i {
+    margin-right: 16px;
+}
+
+.modal-container>.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.modal-container>.modal-close:hover {
+    opacity: 1;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.modal-label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.modal-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+/* #main> * + *{
+    margin-top: 50px;
+} */
+#buy-tickets {
+    background-color: #009688;
+    border: none;
+    color: #fff;
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 18px;
+    cursor: pointer;
+}
+
+#buy-tickets:hover {
+    opacity: 0.9;
+
+}
+
+.modal-footer{
+    padding: 16px;
+    text-align: right;
+}
+.modal-footer a{
+    color: #2196f3;
+}
+
+#ticket-quantity, #ticket-email{
+    width: 97%;
+}
