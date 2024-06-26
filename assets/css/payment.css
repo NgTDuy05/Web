@@ -40,17 +40,17 @@ a {
 
 .main-content {
     display: flex;
-    flex: 1 0 auto;
-    flex-direction: column;
 }
 
-.row {
+.rol {
+    display: flex;
+    flex-wrap: wrap;
     width: 100vw;
 }
 
 .col {
-    flex: 0 0 100%;
-    max-width: 30%;
+    flex: 1;
+    /* max-width: 30%; */
 }
 
 .section {
@@ -63,7 +63,6 @@ a {
 
 .section-content {
     width: 100%;
-    border-color: #bee5eb;
     background-color: #d1ecf1;
     border-radius: 8px;
 }
@@ -93,9 +92,28 @@ a {
 }
 
 .field {
+    margin-bottom: 20px;
     float: left;
     width: 100%;
     box-sizing: border-box;
+}
+
+.fleld-sub {
+    background-color: #357ebd;
+}
+
+.fleld-sub span {
+    padding: 10px;
+    color: #fff;
+    line-height: 32px;
+}
+
+.fieldset {
+    background-color: #fff;
+}
+
+.field-input-wrapper {
+    margin-bottom: 20px;
 }
 
 .field-input {

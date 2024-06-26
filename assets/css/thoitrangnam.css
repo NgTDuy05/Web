@@ -1,0 +1,55 @@
+.row1 {
+    justify-content: start;
+    margin-left: 35px;
+}
+
+.rows {
+    justify-content: space-evenly;
+}
+
+a:hover {
+    color: #fe9614;
+}
+
+
+i {
+    padding: auto 20px;
+    line-height: 90px;
+}
+
+.image-product {
+    height: 330px;
+}
+
+.change {
+    margin: auto 10px;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.action {
+    margin-top: -1px;
+}
+
+.go-to-top {
+    display: none;
+    width: 40px;
+    height: 40px;
+    line-height: 20px;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    background: #232323;
+    position: fixed;
+    right: 15px;
+    bottom: 30px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.swiper {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

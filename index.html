@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THOI TRANG</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./payment.html">
     <link rel="stylesheet" href="./assets/icon/themify-icons-font (1)/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -52,7 +54,7 @@
                             </div>
                         </div>
                         <div class="block-cart">
-                            <i class="ti-shopping-cart"></i>
+                            <i class="ti-shopping-cart js-buy-ticket"></i>
                         </div>
                     </div>
                 </div>
@@ -66,17 +68,17 @@
                     <nav class="header-nav">
                         <ul class="item-big">
                             <li class="nav-item active">
-                                <a href="#" class="a-img">
+                                <a href="#" class="trangchu">
                                     Trang chủ
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="a-img caret-down">
+                                <a href="./Thoitrangnam.html" class="a-img caret-down">
                                     Thời trang nam
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="a-img caret-down">
+                                <a href="./Sanpham.html" class="a-img caret-down">
                                     Sản phẩm
                                 </a>
                             </li>
@@ -129,32 +131,32 @@
             <div class="container home-service swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slider" style="width: 320px; margin-right: 30px;">
-                        <span class="image">
+                        <div class="image">
                             <img src="./assets/img/image_service/image_service1.webp" alt="">
                             <h3>MIỄN PHÍ GIAO HÀNG</h3>
                             <p>Miễn phí ship với đơn hàng > 498K</p>
-                        </span>
+                        </div>
                     </div>
                     <div class="swiper-slider" style="width: 320px; margin-right: 30px;">
-                        <span class="image">
+                        <div class="image">
                             <img src="./assets/img/image_service/image_service2.png" alt="">
                             <h3>THANH TOÁN COD</h3>
                             <p>Thanh toán khi nhận hàng (COD)</p>
-                        </span>
+                        </div>
                     </div>
                     <div class="swiper-slider" style="width: 320px; margin-right: 30px;">
-                        <span class="image">
+                        <div class="image">
                             <img src="./assets/img/image_service/image_service3.webp" alt="">
                             <h3>KHÁCH HÀNG VIP</h3>
                             <p>Ưu đãi dành cho khách hàng VIP</p>
-                        </span>
+                        </div>
                     </div>
                     <div class="swiper-slider" style="width: 320px; margin-right: 30px;">
-                        <span class="image">
+                        <div class="image">
                             <img src="./assets/img/image_service/image_service4.png" alt="">
                             <h3>HỖ TRỢ BẢO HÀNH </h3>
                             <p> Đổi, sửa đồ tại tất cả store</p>
-                        </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -975,27 +977,30 @@
                             <p class="text">Shop Thời trang và phụ kiện Alena</p>
                             <div class="item">
                                 <div class="icon">
-                                    <a href="https://www.google.com/maps/place/C%C3%B4ng+ty+AVA+Vi%E1%BB%87t+Nam/@21.0365159,105.8132974,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab2bddedd8ff:0xde7c4fb8e272fabc!8m2!3d21.0365159!4d105.8158777!16s%2Fg%2F11k71s6rpv?hl=vi-VN&entry=ttu">
+                                    <a
+                                        href="https://www.google.com/maps/place/C%C3%B4ng+ty+AVA+Vi%E1%BB%87t+Nam/@21.0365159,105.8132974,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab2bddedd8ff:0xde7c4fb8e272fabc!8m2!3d21.0365159!4d105.8158777!16s%2Fg%2F11k71s6rpv?hl=vi-VN&entry=ttu">
                                         <i class="fa-solid fa-location-dot"></i>
 
                                     </a>
                                 </div>
-                                <p class="map">Tầng 6, Tòa nhà Ladeco, 266 Đội Cấn, Phường Liễu Giai, Quận Ba Đình, TP Hà Nội</p>
+                                <p class="map">Tầng 6, Tòa nhà Ladeco, 266 Đội Cấn, Phường Liễu Giai, Quận Ba Đình, TP
+                                    Hà Nội</p>
                             </div>
                             <div class="item">
                                 <div class="icon">
                                     <i class="fa-regular fa-clock"></i>
                                 </div>
-                                <p class="time">Giờ làm việc: Từ 9:00 đến 22:00 các ngày trong tuần từ Thứ 2 đến Chủ nhật</p>
+                                <p class="time">Giờ làm việc: Từ 9:00 đến 22:00 các ngày trong tuần từ Thứ 2 đến Chủ
+                                    nhật</p>
                             </div>
                             <div class="item">
                                 <div class="icon">
                                     <i class="fa-solid fa-phone"></i>
-                                </div>       
+                                </div>
                                 <span>Hotline</span>
                                 <a class="tel" href="tel:19006750">
                                     19006750
-                                </a>                        
+                                </a>
                             </div>
                         </div>
                         <div class="col col-length-2">
@@ -1053,36 +1058,58 @@
     </div>
     <div class="modal js-modal">
         <div class="modal-container js-modal-container">
-            <div class="modal-close js-modal-close" >
+            <div class="modal-close js-modal-close">
                 <i class="ti-close"></i>
             </div>
             <header class="modal-header">
-                <i class="ti-bag"></i>
-                Tickets
+                <i class="fa-solid fa-check"></i>
+                Bạn đã thêm [Sản phẩm của bạn] vào giỏ hàng
             </header>
             <div class="modal-body">
-                <label for="ticket-quantity" class="modal-label">
-                    <i class="ti-shopping-cart"></i>
-                    Tickets, $15 per person
-                </label>
-                <input id="ticket-quantity" type="text" class="modal-input" placeholder="How many?">
-
-                <label for="ticket-email" class="modal-label">
-                    <i class="ti-user"></i>
-                    Send To
-                </label>
-                <input id="ticket-email" type="email" class="modal-input" placeholder="Enter email">
-
-                <button id="buy-tickets">
-                    Pay <i class="ti-check"></i>
-                </button>
+                <div class="head">
+                    <p>Giỏ hàng của bạn hiện có ... sản phẩm</p>
+                </div>
+                <div class="content-modal">
+                    <div class="nav">
+                        <a href="#">
+                            <p>Thông tin sản phẩm</p>
+                        </a>
+                        <ul>
+                            <li><a href="#">Đơn giá</a></li>
+                            <li><a href="#">Số lượng</a></li>
+                            <li><a href="#">Thành tiền</a></li>
+                        </ul>
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="infor">
+                            <img src="./assets/img/clothes/tab1/cloth1.webp" alt="" style="width: 80px; height: 80px;">
+                            <p>Áo khoác nữ</p>
+                        </div>
+                        <ul>
+                            <li><a href="#" class="money">300.000đ</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#" class="money">300.000đ</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            
             <footer class="modal-footer">
-                <p class="modal-help">Need <a href="">help?</a></p>
+                <div class="total">
+                    <p>Tổng tiền</p>
+                    <span class="money">300.000đ</span>
+                </div>
+                <div class="pay">
+                    <a href="/payment.html">
+                        <p>Thanh toán</p>
+                    </a>
+                </div>
             </footer>
         </div>
     </div>
+    <a href="#" class="go-to-top">
+        <i class="fa-solid fa-up-long"></i>
+    </a>
     <script>
         const buyBtns = document.querySelectorAll('.js-buy-ticket');
         const modal = document.querySelector('.js-modal');
@@ -1090,25 +1117,41 @@
         const modalContainer = document.querySelector('.js-modal-container')
 
         // Hàm hiển thị modal mua vé (thêm class open vào modal) 
-        function showBuyTickets(){
+        function showBuyTickets(e) {
+            e.preventDefault()
             modal.classList.add('open')
         }
         // Hàm ẩn modal mua vé (gỡ bỏ class open của modal)
-        function hideBuyTickets(){
+        function hideBuyTickets() {
             modal.classList.remove('open');
         }
         // nghe hành vi click của từng button
-        for(const buyBtn of buyBtns) {
-            buyBtn.addEventListener('click', showBuyTickets )
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTickets)
         }
-        
+
         modalClose.addEventListener('click', hideBuyTickets)
 
         modal.addEventListener('click', hideBuyTickets)
 
-        modalContainer.addEventListener('click', function(event){
+        modalContainer.addEventListener('click', function (event) {
             event.stopPropagation()
         })
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop()) {
+                    $(".go-to-top").fadeIn();
+                } else {
+                    $(".go-to-top").fadeOut();
+                }
+            });
+
+            $(".go-to-top").click(function () {
+                $("html, body").animate({ scrollTop: 0 }, 1000);
+            });
+        });
     </script>
 </body>
 
